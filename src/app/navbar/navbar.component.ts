@@ -12,4 +12,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleNavMenu(){
+    console.log("clicked");
+    
+    let navMenu = document.getElementById('toggleIt');
+    console.log(navMenu);
+    navMenu?.classList.toggle('collapse')
+  }
 }
