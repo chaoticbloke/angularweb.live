@@ -1,0 +1,29 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form{
+    width: 25%;
+}
+@media(min-width:320px){
+    
+    form{
+        width: 70vw;
+        font-size: small;
+    }
+}
+@media (min-width:1281px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form{
+        width: 25%;
+    }
+    
+}
