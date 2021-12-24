@@ -13,10 +13,7 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleNavMenu(){
-    console.log("clicked");
-    
     let navMenu = document.getElementById('toggleIt');
-    console.log(navMenu);
     navMenu?.classList.toggle('collapse')
   }
 }

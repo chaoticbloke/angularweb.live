@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
 import { CoursesComponent } from './courses/courses/courses.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
-  {path:'register',component:RegisterComponent},
-  {path:'login', component:LoginComponent},
-  {path:'courses', component:CoursesComponent}
+  {path:'',component:HomeComponent},
+  {path:'register',loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},
+  {path:'login', loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},
+  {path:'courses', component:CoursesComponent},
+  {path:'**', component:PageNotFoundComponent}
 ];
 
 @NgModule({
